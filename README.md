@@ -2,7 +2,7 @@
 
   TODO:  
   -> Food Ordering System  
-  -> Password Validator  
 
   Completed:  
-  -> Character Remover
+  -> Character Remover  
+  -> Password Validator  
