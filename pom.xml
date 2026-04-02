@@ -69,7 +69,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.rebusitjavafx/com.example.rebusitjavafx.HelloApplication</mainClass>
+                            <mainClass>com.example.rebusitjavafx/CharacterRemoverProject.CharacterRemoverApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

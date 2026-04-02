@@ -4,7 +4,8 @@ module com.example.rebusitjavafx {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
-    opens com.example.rebusitjavafx to javafx.fxml;
-    exports com.example.rebusitjavafx;
+    opens CharacterRemoverProject to javafx.fxml;
+    exports CharacterRemoverProject;
 }
