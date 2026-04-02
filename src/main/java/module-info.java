@@ -7,5 +7,8 @@ module com.example.rebusitjavafx {
     requires java.desktop;
 
     opens CharacterRemoverProject to javafx.fxml;
+    opens FoodOrderingSystemProject to javafx.fxml;
+
     exports CharacterRemoverProject;
+    exports FoodOrderingSystemProject;
 }

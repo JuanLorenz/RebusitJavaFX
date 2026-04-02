@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="430.0" prefWidth="501.0" spacing="5.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodOrderingSystemProject.FoodOrderingSystemController">
+   <HBox maxHeight="66.0" maxWidth="383.0" minHeight="34.0" minWidth="300.0" prefHeight="34.0" prefWidth="383.0" spacing="5.0">
+      <children>
+
+          <Label fx:id="displayText" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="209.0" text="Foods">
+              <font>
+                  <Font name="Arial Black" size="13.0" />
+              </font>
+         </Label>
+         <Label fx:id="displayText1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="246.0" text="Discounts">
+            <font>
+               <Font name="Arial Black" size="13.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <GridPane maxHeight="242.0" maxWidth="380.0" minHeight="90.0" minWidth="0.0" prefHeight="242.0" prefWidth="0.0">
+     <columnConstraints>
+       <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <CheckBox fx:id="chkbxPizza" mnemonicParsing="false" onMouseClicked="#onCheckboxClicked" text="Pizza">
+            <padding>
+               <Insets left="10.0" />
+            </padding></CheckBox>
+         <Label prefHeight="18.0" prefWidth="48.0" text="Php 100" GridPane.columnIndex="1" />
+         <CheckBox fx:id="chkbxBurger" layoutX="36.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#onCheckboxClicked" text="Burger" GridPane.rowIndex="1">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox fx:id="chkbxFries" layoutX="36.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#onCheckboxClicked" text="Fries" GridPane.rowIndex="2">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox fx:id="chkbxSoftDrinks" layoutX="36.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#onCheckboxClicked" text="Soft Drinks" GridPane.rowIndex="3">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox fx:id="chkbxTea" layoutX="36.0" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#onCheckboxClicked" text="Tea" GridPane.rowIndex="4">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox fx:id="chkbxSundae" layoutX="36.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#onCheckboxClicked" text="Sundae" GridPane.rowIndex="5">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </CheckBox>
+         <Label layoutX="137.0" layoutY="21.0" prefHeight="18.0" prefWidth="48.0" text="Php 80" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Label layoutX="137.0" layoutY="21.0" prefHeight="18.0" prefWidth="48.0" text="Php 65" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Label layoutX="137.0" layoutY="102.0" prefHeight="18.0" prefWidth="48.0" text="Php 55" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <Label layoutX="137.0" layoutY="102.0" prefHeight="18.0" prefWidth="48.0" text="Php 50" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <Label layoutX="137.0" layoutY="142.0" prefHeight="18.0" prefWidth="48.0" text="Php 40" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <RadioButton fx:id="rdbtnNone" mnemonicParsing="false" onMouseClicked="#onRadioButtonClicked" text="None" GridPane.columnIndex="2">
+            <padding>
+               <Insets left="10.0" />
+            </padding></RadioButton>
+         <RadioButton fx:id="rdbtn5Percent" layoutX="222.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClicked" text="5% off" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </RadioButton>
+         <RadioButton fx:id="rdbtn10Percent" layoutX="200.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClicked" text="10% off" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </RadioButton>
+         <RadioButton fx:id="rdbtn15Percent" layoutX="200.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClicked" text="15% off" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </RadioButton>
+      </children>
+   </GridPane>
+   <Label fx:id="labelResult" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="358.0">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnOrder" mnemonicParsing="false" onMouseClicked="#onButtonClicked" prefHeight="26.0" prefWidth="74.0" text="Order">
+      <VBox.margin>
+         <Insets bottom="20.0" top="5.0" />
+      </VBox.margin></Button>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets top="30.0" />
+   </padding>
+</VBox>
