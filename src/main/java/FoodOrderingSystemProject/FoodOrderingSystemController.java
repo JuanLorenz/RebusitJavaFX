@@ -41,8 +41,8 @@ public class FoodOrderingSystemController {
     public Button btnOrder;
     private int total = 0;
     private double discount;
-    private boolean[] chkbxStates = {false,false,false,false,false,false};
-    private int[] prices = {100,80,65,55,50,45};
+    private final boolean[] chkbxStates = {false,false,false,false,false,false};
+    private final int[] prices = {100,80,65,55,50,45};
 
     public void onRadioButtonClicked(MouseEvent mouseEvent) {
         RadioButton src = (RadioButton) mouseEvent.getSource();

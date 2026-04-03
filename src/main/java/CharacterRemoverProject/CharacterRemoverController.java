@@ -14,9 +14,8 @@ public class CharacterRemoverController {
     public Button btnRemove;
     public Button btnRestore;
     public Label displayText;
-    private final String defaultText = "ABCDEFGHIJKLMNOPQRSTUVWXWYZ0123456789";
-    private boolean[] map = {false,false,false};
-    private boolean[] state = {false,false,false};
+    private final boolean[] map = {false,false,false};
+    private final boolean[] state = {false,false,false};
 
     public void onChkbxClicked(MouseEvent mouseEvent) {
         CheckBox src = (CheckBox) mouseEvent.getSource();
@@ -49,7 +48,7 @@ public class CharacterRemoverController {
             }
             if (map[2]) {
                 if (state[2]){
-                    displayText.setText(displayText.getText().replaceAll("[0123456789]",""));
+                    displayText.setText(displayText.getText().replaceAll("[0-9]",""));
                 }
             }
 
@@ -57,6 +56,7 @@ public class CharacterRemoverController {
             for (boolean b: map){
                 b = false;
             }
+            String defaultText = "ABCDEFGHIJKLMNOPQRSTUVWXWYZ0123456789";
             displayText.setText(defaultText);
         }
     }

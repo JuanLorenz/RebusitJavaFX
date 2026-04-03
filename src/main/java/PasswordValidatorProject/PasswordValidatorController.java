@@ -13,16 +13,15 @@ public class PasswordValidatorController {
 
     public Label displayText;
     public PasswordField passFieldMain;
-    private String input;
-    private Pattern pattern1 = Pattern.compile("[0-9]");
-    private Pattern pattern2 = Pattern.compile("[^a-zA-Z0-9 ]");
+    private final Pattern pattern1 = Pattern.compile("[0-9]");
+    private final Pattern pattern2 = Pattern.compile("[^a-zA-Z0-9 ]");
     private Matcher matcher;
 
     public void onKeyTypedListener(KeyEvent keyEvent) {
 
         PasswordField pf = (PasswordField) keyEvent.getSource();
 
-        input = pf.getText();
+        String input = pf.getText();
 
         if (!(input.length() >= 8)){
             displayText.setText("Password must be 8 characters long");
