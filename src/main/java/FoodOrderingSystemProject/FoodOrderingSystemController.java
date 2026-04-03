@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
+import java.util.ArrayList;
+
 public class FoodOrderingSystemController {
 
     public CheckBox chkbxPizza;
@@ -12,6 +14,7 @@ public class FoodOrderingSystemController {
     public CheckBox chkbxSoftDrinks;
     public CheckBox chkbxTea;
     public CheckBox chkbxSundae;
+    public ArrayList<CheckBox> cbList = new ArrayList<>();
 
     public RadioButton rdbtnNone;
     public RadioButton rdbtn5Percent;
@@ -25,6 +28,13 @@ public class FoodOrderingSystemController {
         rdbtn5Percent.setToggleGroup(group);
         rdbtn10Percent.setToggleGroup(group);
         rdbtn15Percent.setToggleGroup(group);
+
+        cbList.add(chkbxPizza);
+        cbList.add(chkbxBurger);
+        cbList.add(chkbxFries);
+        cbList.add(chkbxSoftDrinks);
+        cbList.add(chkbxTea);
+        cbList.add(chkbxSundae);
     }
 
     public Label labelResult;
@@ -32,6 +42,7 @@ public class FoodOrderingSystemController {
     private int total = 0;
     private double discount;
     private boolean[] chkbxStates = {false,false,false,false,false,false};
+    private int[] prices = {100,80,65,55,50,45};
 
     public void onRadioButtonClicked(MouseEvent mouseEvent) {
         RadioButton src = (RadioButton) mouseEvent.getSource();
@@ -73,48 +84,9 @@ public class FoodOrderingSystemController {
     public void onCheckboxClicked(MouseEvent mouseEvent) {
         CheckBox src = (CheckBox) mouseEvent.getSource();
 
-        if (src.equals(chkbxPizza)){
-            chkbxStates[0] = (!chkbxStates[0]);
-            if (chkbxStates[0]){
-                total += 100;
-            }else{
-                total -= 100;
-            }
-        }else if (src.equals(chkbxBurger)){
-            chkbxStates[1] = (!chkbxStates[1]);
-            if (chkbxStates[1]){
-                total += 80;
-            }else{
-                total -= 80;
-            }
-        }else if (src.equals(chkbxFries)){
-            chkbxStates[2] = (!chkbxStates[2]);
-            if (chkbxStates[2]){
-                total += 65;
-            }else{
-                total -= 65;
-            }
-        }else if (src.equals(chkbxSoftDrinks)){
-            chkbxStates[3] = (!chkbxStates[3]);
-            if (chkbxStates[3]){
-                total += 55;
-            }else{
-                total -= 55;
-            }
-        }else if (src.equals(chkbxTea)){
-            chkbxStates[4] = (!chkbxStates[4]);
-            if (chkbxStates[4]){
-                total += 50;
-            }else{
-                total -= 50;
-            }
-        }else{
-            chkbxStates[5] = (!chkbxStates[5]);
-            if (chkbxStates[5]){
-                total += 40;
-            }else{
-                total -= 40;
-            }
-        }
+        int idx = cbList.indexOf(src);
+        chkbxStates[idx] = !(chkbxStates[idx]);
+        total = (chkbxStates[idx]) ? (total + prices[idx]) : (total - prices[idx]);
+
     }
 }
