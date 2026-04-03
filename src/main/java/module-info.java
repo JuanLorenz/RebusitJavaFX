@@ -8,7 +8,10 @@ module com.example.rebusitjavafx {
 
     opens CharacterRemoverProject to javafx.fxml;
     opens FoodOrderingSystemProject to javafx.fxml;
+    opens PasswordValidatorProject to javafx.fxml;
+
 
     exports CharacterRemoverProject;
     exports FoodOrderingSystemProject;
+    exports PasswordValidatorProject;
 }
